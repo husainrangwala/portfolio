@@ -1,0 +1,44 @@
+/* Button Group Container */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between buttons */
+    margin: 20px 0;
+  }
+  
+  /* Common Button Styles */
+  .button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* blue background */
+    color: white; /* white text */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover Effect */
+  .button-group button:hover {
+    background-color: #0056b3; /* darker blue on hover */
+    transform: scale(1.05); /* slight scale effect */
+  }
+  
+  /* Active Button */
+  .button-group button:active {
+    background-color: #00408b;
+    transform: scale(0.95); /* slight shrink effect on click */
+  }
+  
+  /* Focused Button */
+  .button-group button:focus {
+    outline: none;
+    border-color: #0056b3; /* blue border when focused */
+  }
+  
+  /* Disabled Button */
+  .button-group button:disabled {
+    background-color: #ccc; /* gray background */
+    color: #666; /* gray text */
+    cursor: not-allowed;
+  }
