@@ -1,13 +1,86 @@
+/* Main container styling */
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100vw;
-  position: absolute;
-  background-color: #f7f7f7;
+  padding: 20px;
+  background-color: #f7f7f7; /* Matching light background */
+  box-sizing: border-box;
+  position: relative;
+  animation: fadeInContainer 0.8s ease-in-out;
 }
 
+/* Animation for container appearance */
+@keyframes fadeInContainer {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title styling */
 #title {
   font-size: 4rem;
+  color: #0057b8;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: fadeInTitle 0.8s ease-in-out;
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button group styling */
+.buttonGroup {
+  margin-bottom: 30px;
+  animation: fadeInButtonGroup 1s ease-in-out;
+}
+
+@keyframes fadeInButtonGroup {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sidebar and Contact should have some space to breathe */
+.sidebar, .contact {
+  margin-top: 20px;
+}
+
+/* Responsiveness for mobile screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    height: auto; /* Adjusts for smaller height screens */
+  }
+
+  #title {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+  }
+
+  .buttonGroup {
+    margin-bottom: 20px;
+  }
 }
