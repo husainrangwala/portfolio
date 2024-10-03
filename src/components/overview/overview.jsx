@@ -24,7 +24,7 @@ const Overview = () => {
           <h2>Technologies</h2>
         </div>
         <h3>Languages and Libraries</h3>
-        <div className="languages">
+        <div className="icon-grid">
           {Object.keys(languages).map((language) => (
             <div key={language} className="iconcontainer">
               {languages[language]}
@@ -33,9 +33,9 @@ const Overview = () => {
           ))}
         </div>
         <h3>Applications</h3>
-        <div className="applications">
+        <div className="icon-grid">
           {Object.keys(tools).map((tool) => (
-            <div key={tools} className="iconcontainer">
+            <div key={tool} className="iconcontainer">
               {tools[tool]}
               <p>{tool}</p>
             </div>
