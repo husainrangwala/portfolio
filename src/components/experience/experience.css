@@ -1,32 +1,88 @@
 /* Experience wrapper styling */
 .experience {
   width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 1rem auto;
+  padding: 25px;
   background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Experience details */
 .experience-details {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Title styling */
 .experience-details h1 {
-  font-size: 24px;
-  color: #007bff;
-  margin-bottom: 10px;
+  font-size: 28px;
+  color: #0057b8;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.experience-details h1::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #0057b8;
+  display: block;
+  margin: 12px 0 0;
+  animation: growUnderline 0.6s ease-in-out;
+}
+
+@keyframes growUnderline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60px;
+  }
 }
 
 /* Company and duration styling */
 .experience-details h2 {
-  font-size: 20px;
+  font-size: 22px;
   color: #333;
-  margin: 5px 0;
+  margin: 8px 0;
+}
+
+.experience-details h4 {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 15px;
+  font-weight: normal;
 }
 
 /* Description list */
@@ -35,29 +91,54 @@
   margin-left: 20px;
 }
 
-/* List items */
 .experience-details ul li {
   font-size: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #555;
+  animation: fadeInList 0.6s ease-in-out;
+}
+
+@keyframes fadeInList {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hover effects for experience details */
+.experience-details:hover h1 {
+  color: #007bff;
+}
+
+.experience-details:hover h2 {
+  color: #0056b3;
+}
+
+.experience-details:hover ul li {
+  color: #333;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .experience {
     width: 90%;
+    padding: 20px;
   }
 
   .experience-details h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .experience-details h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .experience-details h4 {
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .experience-details ul li {
